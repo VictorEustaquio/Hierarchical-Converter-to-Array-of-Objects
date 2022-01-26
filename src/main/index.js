@@ -22,7 +22,7 @@ const getMongoData = async (searchObj) => {
 try {
   setTimeout(async () => {
     const FormatedData = await ArrayObjectToHierarchical(
-      JSON.stringify(await getMongoData({ root: 1 }))
+      JSON.stringify(await getMongoData({ root: 1 }), '_id', 'parent')
     );
     console.log("OUTPUT: ", FormatedData);
   }, 1000);
