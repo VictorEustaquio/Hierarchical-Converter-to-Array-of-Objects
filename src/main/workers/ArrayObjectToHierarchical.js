@@ -2,7 +2,7 @@ module.exports = {
   async ArrayObjectToHierarchical(ArrayObject, ObjectId, ParentFolder) {
     /**
      * @param {Array.<Object>} ArrayObject  > Data set from mongoDb (for example).
-     * @param {String} ObjectId         > _id of Object or File (must be unique).
+     * @param {String} ObjectId             > _id of Object or File (must be unique).
      * @param {String} ParentFolder         > Parent folder
      */
     ArrayObject = JSON.parse(ArrayObject); // I know we did JSON.stringify(JSON.parse()). Tried using Deep Clone but it didn't work, contribute your solution here :)
