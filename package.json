@@ -1,0 +1,16 @@
+{
+  "name": "mongo_services",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./src/main/index.js",
+  "scripts": {
+    "start": "nodemon ./src/main/index.js"
+  },
+  "author": "Victor V. Eustáquio Almeida",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "mongoose": "^6.0.11",
+    "nodemon": "^2.0.14"
+  }
+}

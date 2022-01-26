@@ -1,0 +1,15 @@
+require("dotenv").config();
+
+module.exports = {
+  MONGO_PASSWORD: process.env.MONGO_PASSWORD,
+  MONGO_ADMIN: process.env.MONGO_ADMIN || "admin",
+  MONGO_PASSWORD: process.env.MONGO_PASSWORD || "",
+  MONGO_PORT: process.env.MONGO_PORT || 27017,
+  MONGO_DATABASE: process.env.MONGO_DATABASE || "development",
+  MONGO_CONTAINER_PORT: process.env.MONGO_CONTAINER_PORT || 27017,
+  MONGO_CONTAINER_HOST: process.env.MONGO_CONTAINER_HOST || "localhost",
+  MONGOEXPRESS_USER: process.env.MONGOEXPRESS_USER,
+  MONGOEXPRESS_PASSWORD: process.env.MONGOEXPRESS_PASSWORD,
+  MONGOEXPRESS_PORT: process.env.MONGOEXPRESS_PORT,
+  MONGOEXPRESS_CONTAINER_PORT: process.env.MONGOEXPRESS_CONTAINER_PORT,
+};

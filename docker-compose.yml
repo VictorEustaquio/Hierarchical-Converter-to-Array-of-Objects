@@ -1,0 +1,39 @@
+version: '3'
+services:
+  mongo:
+    env_file: ./.env
+    image: mongo:latest
+    container_name: MongoDB
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ADMIN}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - ${MONGO_HOST_DATA}/db:/data/db
+    ports:
+      - ${MONGO_CONTAINER_PORT}:${MONGO_PORT}
+    restart: unless-stopped
+    networks:
+      - mongo-compose-network
+
+# Not working, use MongoDB Compass instead
+#  mongo-express:
+#    image: mongo-express:latest
+#    container_name: Mongo-Express
+#    environment:
+#      - ME_CONFIG_BASICAUTH_USERNAME=${MONGOEXPRESS_USER}
+#      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGOEXPRESS_PASSWORD}
+#      - ME_CONFIG_MONGODB_PORT=${MONGO_PORT}
+#      - ME_CONFIG_MONGODB_ADMINUSERNAME=${MONGO_ADMIN}
+#      - ME_CONFIG_MONGODB_ADMINPASSWORD=${MONGO_PASSWORD}
+#      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+#    ports:
+#      - ${MONGOEXPRESS_CONTAINER_PORT}:MONGOEXPRESS_PORT
+#    links:
+#      - mongo
+#    networks:
+#      - mongo-compose-network
+#    restart: unless-stopped
+    
+networks: 
+    mongo-compose-network:
+      driver: bridge
