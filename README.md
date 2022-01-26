@@ -171,7 +171,7 @@ $ npm run start
 ```
 
 ## Utilidade
-Após a conversão dos dados, você poderar implementar gerenciadores e explorardores de arquivo com facilidade, utilizando bibliotecas como: 
+Após a conversão dos dados, você poderar implementar gerenciadores e explorardores de arquivos com facilidade, utilizando bibliotecas como: 
 - [dxFileMnager](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxFileManager/)
 
 
