@@ -1,6 +1,5 @@
 module.exports = {
   async ArrayObjectToHierarchical(ArrayObject, ObjectId, ParentFolder) {
-    console.log(" ObjectId ", ObjectId, "ParentFolder", ParentFolder)
     /**
      * @param {Array.<Object>} ArrayObject  > Data set from mongoDb (for example).
      * @param {String} ObjectId             > _id of Object or File (must be unique).
